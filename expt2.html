@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Multiplication Table</title>
+ </head>
+ <body style="text-align: center; background-color: #fcfcfc;">
+ <h1>Multiplication Table</h1>
+ <h1>42247 Anushka Mane </h1>
+ <label for="Given">
+ Enter a number:
+ </label>
+ <input type="number" id="Given"
+ placeholder="Enter a number">
+ <br><br>
+ <button onclick="tablE()">Click Here For the Table</button>
+ <p>
+ Multiplication Table using For Loop: <br><span id="displayf"></span>
+ </p>
+ <label for="Given">
+    Enter a number:
+    </label>
+ <input type="number" id="Given1"
+ placeholder="Enter a number">
+ <br><br>
+ <button onclick="tablW()">Click Here For the Table</button>
+ <p>
+ Multiplication Table using While Loop: <br><span id="displayw"></span>
+ </p>
+ <label for="Given">
+    Enter a number:
+    </label>
+ <input type="number" id="Given2"
+ placeholder="Enter a number">
+ <br><br>
+ <button onclick="tablD()">Click Here For the Table</button>
+ <p>
+ Multiplication Table using Do-While Loop: <span id="displayd"></span>
+ </p>
+ <script>
+ function tablE() {
+ let num = parseInt(document.getElementById("Given").value);
+
+ let sentence = "";
+ for (let i = 1; i <= 10; i++) {
+ let final = num * (i);
+ sentence += ` \n ${num} X ${i} = ${final} <br/>`;
+ }
+ document.getElementById("displayf").innerHTML = sentence
+ }
+ function tablW() {
+ var num = parseInt(document.getElementById("Given1").value);
+
+ // Using While Loop
+ var resultW = "";
+ var i = 1;
+ while (i <= 10) {
+ resultW += num + " x " + i + " = " + (num * i) + "<br>";
+ i++;
+ }
+ document.getElementById("displayw").innerHTML = resultW;
+ }
+
+ function tablD() {
+ var num = parseInt(document.getElementById("Given2").value);
+ var resultD = "";
+ var j = 1;
+ do {
+ resultD += num + " x " + j + " = " + (num * j) + "<br>";
+ j++;
+ } while (j <= 10);
+ document.getElementById("displayd").innerHTML = resultD;
+
+ }
+ </script>
+ </body>
+</html>
